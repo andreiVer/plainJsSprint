@@ -20,6 +20,7 @@ const url = window.location.host;
         return helpBlock;
     };
 
+    // I expect these to come from an API.
     let getElements = new Promise((resolve)=>{
         fetch(`data/elements.json`).then( (response) =>{
             return response.json();
