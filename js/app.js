@@ -12,7 +12,6 @@ const url = window.location.host;
             </div>
         `.trim();
 
-        helpBlock.firstChild.style.backgroundColor = color;
         helpBlock.querySelector('.card-color').style.backgroundColor = color;
 
 

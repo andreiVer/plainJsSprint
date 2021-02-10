@@ -79,7 +79,7 @@ footer{
         justify-content: center;
         align-items: center;
         margin-top: .5em;
-        background: #EFEFEF !important;
+        background: #EFEFEF;
     }
 
     .card:first-child{
