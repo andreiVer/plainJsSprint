@@ -1,7 +1,13 @@
 const url = window.location.host;
 (()=>{
     document.getElementsByClassName('my-name')[0].textContent = "Andrei Verdes";
-    
+    document.getElementsByName('sort')[0].addEventListener('click', ()=>{
+        sortCards();
+    });
+    document.getElementsByName('shuffle')[0].addEventListener('click', ()=>{
+        shuffleCards();
+    });
+
     let generateCard = (name, value, color) => {
         let helpBlock = document.createElement('div');
         helpBlock.innerHTML = `
@@ -34,25 +40,46 @@ const url = window.location.host;
 
     let [cardsPannel] = document.getElementsByClassName('cards-pannel');
     
-    let cards = document.createElement('div');
 
     getElements.then((elements)=>{
+        updateCards(elements);
+    })
+
+  
+    let updateCards = (elements) => {
+        
+        let cards = document.createElement('div');
+
         elements.forEach(element => {
             let card = generateCard(element.name, element.value, element.color);
             cards.appendChild(card.firstChild);
         });
         cardsPannel.innerHTML = cards.innerHTML;
-    })
-
-  
+    };
 
     let shuffleCards = () => {
+        getElements.then((elements)=>{
+            // I  will use the Fisher - Yates algoritm.
+            for(i=0; i<=elements.length-2; i++){
 
+                const j = Math.floor(Math.random()*(i+2));
+                
+                [elements[i], elements[j]] = [elements[j], elements[i]] 
+            }
+
+            updateCards(elements);
+
+        })
     }
 
     let  sortCards = () => {
-        elements
-
+        getElements.then((elements)=>{
+            elements.sort((x, y)=>{
+                return x.value - y.value;
+            });
+        
+            updateCards(elements);
+        })
     }
 })();
 

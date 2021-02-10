@@ -40,7 +40,7 @@ footer{
 }
 
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 959px) {
     body{
         background-color: #FFFF;
     }
@@ -90,9 +90,7 @@ footer{
     }
 }
 
-@media only screen and (min-width: 375px) and (max-width: 960px) {
-  
-}
+
 
 @media only screen and (min-width: 960px) {
     header{
@@ -100,6 +98,7 @@ footer{
         padding: 1em 0;
     }
     .content{
+        max-width: 960px;
         border-top: .5em solid #BFBFBF;
         flex-direction: row-reverse;
         align-items: flex-start;
