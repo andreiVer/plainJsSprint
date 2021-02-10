@@ -32,9 +32,6 @@ footer{
     cursor: pointer;
     background-color: #2B8EAD;
 }
-.cards-pannel{
-    border-top: .5em solid ;
-}
 
 .card{
     color: #FFFF;
@@ -65,7 +62,6 @@ footer{
     }
     
     .cards-pannel{
-        border-top: none;
         width: 90%;        
 
     }
@@ -94,11 +90,59 @@ footer{
     }
 }
 
-
 @media only screen and (min-width: 375px) and (max-width: 960px) {
   
 }
 
 @media only screen and (min-width: 960px) {
-   
+    header{
+        background-color: #FFFF;
+        padding: 1em 0;
+    }
+    .content{
+        border-top: .5em solid #BFBFBF;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: flex-end;
+    }
+    .cards-pannel{
+       width: 70%;
+       display: flex;
+       flex-direction: row;
+       flex-wrap: wrap;
+   }
+
+   .card{
+       position: relative;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 33%;
+       height: 13em;
+   }
+   .card>h1{
+       position: relative;
+       z-index: 1;
+       font-size: 5em;
+   }
+   .card-color{
+       position: absolute;
+       width: 100%;
+       height: 100%;
+       z-index: 0;
+   }
+
+   .button-wrap{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       width:30%;
+       padding-top: 1em; 
+   }
+
+   .button-primary{
+       margin:1em;
+       width: 17em;
+   }
 }
