@@ -1,0 +1,104 @@
+body{
+    background-color: #EFEFEF;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    text-align: center;
+}
+footer{
+   text-align: center;
+}
+
+.content{
+    display: flex;
+}
+
+.button-primary{ 
+    color: #FFFF;
+    text-transform: uppercase;
+    width: 10em;
+    padding: 1em 0;
+ 
+    background-color: #72C3DC;
+    border: none;
+    border-radius: .5em;
+
+    border-bottom: .3em solid #2B8EAD;
+}
+
+.button-primary:hover{
+    cursor: pointer;
+    background-color: #2B8EAD;
+}
+.cards-pannel{
+    border-top: .5em solid ;
+}
+
+.card{
+    color: #FFFF;
+    background-color: #EFEFEF;
+
+}
+
+
+@media only screen and (max-width: 375px) {
+    body{
+        background-color: #FFFF;
+    }
+
+    header{
+        padding: 1em 0;
+        background-color: #333333;
+        color: #FFFF;
+    }
+
+    .content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button-wrap{
+        margin: 1em 0;
+    }
+    
+    .cards-pannel{
+        border-top: none;
+        width: 90%;        
+
+    }
+
+    .card{
+        position: relative;
+        width: 100%;
+        display: flex;
+        color: #000000;
+        height: 3em;
+        justify-content: center;
+        align-items: center;
+        margin-top: .5em;
+        background: #EFEFEF !important;
+    }
+
+    .card:first-child{
+        margin-top:0;
+    }
+
+    .card-color{
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 1em;
+    }
+}
+
+
+@media only screen and (min-width: 375px) and (max-width: 960px) {
+  
+}
+
+@media only screen and (min-width: 960px) {
+   
+}
